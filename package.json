@@ -1,6 +1,6 @@
 {
   "name": "@peetersfr/node-red-contrib-context-flex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The node-red-contrib-context-flex module allows the user to set and get context variables in the flows based on parameters of the nodes or from the message to simplify the flow layout.",
   "node-red" : {
     "nodes": {
@@ -18,5 +18,5 @@
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/peetersfr/-peetersfr-node-red-contrib-context-flex"
+    "url": "https://github.com/peetersfr/-peetersfr-node-red-contrib-context-flex"}
 }
