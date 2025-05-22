@@ -18,5 +18,5 @@
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hj91/node-red-contrib-context-set-get.git"
+    "url": "https://github.com/peetersfr/-peetersfr-node-red-contrib-context-flex"
 }
