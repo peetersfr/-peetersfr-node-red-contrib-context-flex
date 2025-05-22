@@ -1,0 +1,110 @@
+<!-- get.html -->
+
+<!--
+
+Copyright 2025 peetersfr, Court-St-Etienne
+
+Licensed under the GNU General Public License, Version 3.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.gnu.org/licenses/gpl-3.0.html
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
+
+
+<script type="text/javascript">
+  RED.nodes.registerType('get-context', {
+    category: 'storage-input',
+    color: '#E48312',
+    defaults: {
+      name: { value: '' },
+      contextType: { value: 'flow' },
+	  contextVariable: { value: '' },
+	  debug: { value: false}
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: 'font-awesome/fa-database',
+	align: 'left',
+    label: function () {
+      return this.name || 'get-context';
+    },
+	labelStyle: function() {
+		return this.name?"node_label_italic":"";
+	},
+    oneditprepare: function () {
+      var contextType = $('#node-input-contextType');
+      contextType.change(function () {
+        if (contextType.val() === 'global') {
+          // Additional configurations for global context
+        } else {
+          // Additional configurations for flow context
+        }
+      });
+	  var debug = $('#node-input-debug');
+    }
+  });
+</script>
+
+<script type="text/html" data-template-name="get-context">
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+    <label for="node-input-contextType"><i class="fa fa-book"></i> Context Type</label>
+    <select id="node-input-contextType">
+      <option value="flow">flow</option>
+      <option value="global">global</option>
+    </select>
+  </div>
+  <div class="form-row">
+    <label for="node-input-contextVariable"><i class="fa fa-usd"></i> Variable</label>
+    <input type="text" id="node-input-contextVariable" placeholder="Variable">
+  </div>
+  <div class="form-row">
+    <label for="node-input-debug"><i class="fa fa-bug"></i> Debug</label>
+    <input type="checkbox" id="node-input-debug">
+  </div>
+  <div class="form-tips">
+	  <b>Tip:</b><br>
+	  Context Type will be overridden by the <code>msg.contextType</code> value.<br>
+	  Variable to retrieve will be overridden by the <code>msg.topic</code> value.<br>
+	  Error messages will be issued if the Debug propriety is checked.
+  </div>
+</script>
+
+<script type="text/html" data-help-name="get-context">
+  <p>Retrieves a context variable based on the msg parameters or the node configuration.</p>
+  <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>contextType <span class="property-type">string</span></dt>
+        <dd> the context from which the variable will be retrieved.</dd>
+        <dt>topic <span class="property-type">string</span></dt>
+        <dd> the name of the variable that will be retrieved.</dd>
+        <dt>debug <span class="property-type">boolean</span></dt>
+        <dd> will issue errors if checked.</dd>
+    </dl>
+
+ <h3>Outputs</h3>
+     <ol class="node-ports">
+         <li>Standard output
+             <dl class="message-properties">
+                 <dt>payload <span class="property-type">string | buffer</span></dt>
+                 <dd>the value of the value retrieved.</dd>
+             </dl>
+         </li>
+     </ol>
+
+<h3>Details</h3>
+    <p><code>msg.contextType</code> and <code>msg.contextVariable</code> are used to retreive the variable in the context.<br>
+    If the <code>msg</code> protrieties are not set, the node configuration will be used.</p>
+	<p>To get error message generated, check the node Debug propriety.</p>
+</script>

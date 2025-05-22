@@ -1,0 +1,507 @@
+[
+    {
+        "id": "41e7cbee711f709e",
+        "type": "tab",
+        "label": "Example",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ad3bd079ab88122d",
+        "type": "get-context",
+        "z": "41e7cbee711f709e",
+        "name": "Get Flow Value1",
+        "contextType": "flow",
+        "contextVariable": "Value1",
+        "debug": true,
+        "x": 680,
+        "y": 420,
+        "wires": [
+            [
+                "f48b9693d17bbef3"
+            ]
+        ]
+    },
+    {
+        "id": "9fb295868458f817",
+        "type": "set-context",
+        "z": "41e7cbee711f709e",
+        "name": "Set Flow Value1",
+        "contextType": "flow",
+        "contextVariable": "Value1",
+        "x": 680,
+        "y": 240,
+        "wires": [
+            [
+                "f48b9693d17bbef3"
+            ]
+        ]
+    },
+    {
+        "id": "62236c8cdf0160e9",
+        "type": "inject",
+        "z": "41e7cbee711f709e",
+        "name": "Flow Value1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 410,
+        "y": 160,
+        "wires": [
+            [
+                "9fb295868458f817"
+            ]
+        ]
+    },
+    {
+        "id": "d35d775f1544c4d0",
+        "type": "inject",
+        "z": "41e7cbee711f709e",
+        "name": "Flow Value2",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Value2",
+        "payload": "",
+        "payloadType": "date",
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "9fb295868458f817"
+            ]
+        ]
+    },
+    {
+        "id": "32933d3a3ae03ad0",
+        "type": "comment",
+        "z": "41e7cbee711f709e",
+        "name": "Sets flow Value1 to timestamp",
+        "info": "",
+        "x": 160,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "575ded5ab09d95f6",
+        "type": "comment",
+        "z": "41e7cbee711f709e",
+        "name": "Sets flow Value2 to timestamp",
+        "info": "",
+        "x": 160,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "fa89a2e3b646941f",
+        "type": "inject",
+        "z": "41e7cbee711f709e",
+        "name": "Flow Value1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "contextType",
+                "v": "global",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 410,
+        "y": 240,
+        "wires": [
+            [
+                "9fb295868458f817"
+            ]
+        ]
+    },
+    {
+        "id": "b3382ac350ea201b",
+        "type": "inject",
+        "z": "41e7cbee711f709e",
+        "name": "Flow Value2",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "contextType",
+                "v": "global",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Value2",
+        "payload": "",
+        "payloadType": "date",
+        "x": 410,
+        "y": 280,
+        "wires": [
+            [
+                "9fb295868458f817"
+            ]
+        ]
+    },
+    {
+        "id": "3b28bdc42ba3c135",
+        "type": "comment",
+        "z": "41e7cbee711f709e",
+        "name": "Sets global Value1 to timestamp",
+        "info": "",
+        "x": 170,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "dae6f5f9a6a364c2",
+        "type": "comment",
+        "z": "41e7cbee711f709e",
+        "name": "Sets global Value2 to timestamp",
+        "info": "",
+        "x": 170,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "38048762df9680c4",
+        "type": "inject",
+        "z": "41e7cbee711f709e",
+        "name": "Flow Value1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 410,
+        "y": 340,
+        "wires": [
+            [
+                "ad3bd079ab88122d"
+            ]
+        ]
+    },
+    {
+        "id": "d4d84ce7c9d73ac0",
+        "type": "inject",
+        "z": "41e7cbee711f709e",
+        "name": "Flow Value2",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Value2",
+        "payload": "",
+        "payloadType": "date",
+        "x": 410,
+        "y": 380,
+        "wires": [
+            [
+                "ad3bd079ab88122d"
+            ]
+        ]
+    },
+    {
+        "id": "5a0240b35f2b788e",
+        "type": "comment",
+        "z": "41e7cbee711f709e",
+        "name": "Gets flow Value1",
+        "info": "",
+        "x": 120,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "bb2f7bfc0b3c15b4",
+        "type": "comment",
+        "z": "41e7cbee711f709e",
+        "name": "Gets flow Value2",
+        "info": "",
+        "x": 120,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "11813893c4fa3cb7",
+        "type": "inject",
+        "z": "41e7cbee711f709e",
+        "name": "Flow Value1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "contextType",
+                "v": "global",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 410,
+        "y": 420,
+        "wires": [
+            [
+                "ad3bd079ab88122d"
+            ]
+        ]
+    },
+    {
+        "id": "f5ae8069b99888d1",
+        "type": "inject",
+        "z": "41e7cbee711f709e",
+        "name": "Flow Value2",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "contextType",
+                "v": "global",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Value2",
+        "payload": "",
+        "payloadType": "date",
+        "x": 410,
+        "y": 460,
+        "wires": [
+            [
+                "ad3bd079ab88122d"
+            ]
+        ]
+    },
+    {
+        "id": "8dc1bb133c1ee330",
+        "type": "comment",
+        "z": "41e7cbee711f709e",
+        "name": "Gets global Value1",
+        "info": "",
+        "x": 130,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "53fe5b49d44d0d4d",
+        "type": "comment",
+        "z": "41e7cbee711f709e",
+        "name": "Gets global Value2",
+        "info": "",
+        "x": 130,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "f48b9693d17bbef3",
+        "type": "debug",
+        "z": "41e7cbee711f709e",
+        "name": "Feedback",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "78cc48403e2efe94",
+        "type": "inject",
+        "z": "41e7cbee711f709e",
+        "name": "Flow Value1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [
+                "ad3bd079ab88122d"
+            ]
+        ]
+    },
+    {
+        "id": "4664fdb72d01e993",
+        "type": "comment",
+        "z": "41e7cbee711f709e",
+        "name": "Gets flow Value1 - non existing",
+        "info": "",
+        "x": 170,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "0a7c5600d00639b1",
+        "type": "inject",
+        "z": "41e7cbee711f709e",
+        "name": "Flow Value1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 410,
+        "y": 560,
+        "wires": [
+            [
+                "ad3bd079ab88122d"
+            ]
+        ]
+    },
+    {
+        "id": "91402cfd05948e1a",
+        "type": "comment",
+        "z": "41e7cbee711f709e",
+        "name": "Gets flow Value1",
+        "info": "",
+        "x": 120,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "0b20f209033f654d",
+        "type": "comment",
+        "z": "41e7cbee711f709e",
+        "name": "Erase flow Value1 to timestamp",
+        "info": "",
+        "x": 170,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "d568ef46689379e6",
+        "type": "inject",
+        "z": "41e7cbee711f709e",
+        "name": "Flow Value1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "undefined",
+        "payloadType": "jsonata",
+        "x": 410,
+        "y": 520,
+        "wires": [
+            [
+                "9fb295868458f817"
+            ]
+        ]
+    }
+]
